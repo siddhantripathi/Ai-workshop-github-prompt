@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import "./App.css";
 
-const WEBHOOK_URL = "https://tripps.app.n8n.cloud/webhook/github-analyzer";
+const WEBHOOK_URL = "/api/analyze";
 
 function isValidGithubUrl(url) {
   try {

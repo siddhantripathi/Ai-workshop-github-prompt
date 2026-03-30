@@ -5,10 +5,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api/webhook': {
+      '/api/analyze': {
         target: 'https://tripps.app.n8n.cloud',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/webhook/, '/webhook/github-analyzer'),
+        rewrite: () => '/webhook/github-analyzer',
         secure: true,
       },
     },
